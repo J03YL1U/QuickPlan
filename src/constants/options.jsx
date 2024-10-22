@@ -23,7 +23,7 @@ export const SelectNumberOfTravellers=[
     {
         id:3,
         title:'My Friends',
-        desc:'A trip would not be complete without my frieds',
+        desc:'A trip would not be complete without my friends',
         icon:'🤗',
         people:'5 to 10 people'
     }
@@ -33,7 +33,7 @@ export const SelectBudgetOptions=[
     {
         id:1,
         title:"Cheap",
-        desc:"I do not want to spend to much on this trip.",
+        desc:"I do not want to spend too much on this trip.",
         icon:'💵'
     },
     {
