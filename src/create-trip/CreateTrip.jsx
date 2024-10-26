@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { AI_PROMPT, SelectBudgetOptions, SelectNumberOfTravellers } from '@/constants/options';
 import { chatSession } from '@/service/aiModel';
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete'
 import { toast } from 'sonner';
 import {
@@ -19,6 +19,7 @@ import { FcGoogle } from "react-icons/fc";
 import { useGoogleLogin } from '@react-oauth/google';
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { db } from "@/service/firebaseConfig";
+import { useNavigate } from 'react-router-dom';
 
 function CreateTrip() {
 
@@ -29,6 +30,8 @@ function CreateTrip() {
   const [openDialog,setOpenDialog] = useState(false);
 
   const [loading, setLoading] = useState(false);
+
+  const navigator = useNavigate();
 
   const handleInputChange=(name,value)=>{
     setFormData({
@@ -82,6 +85,8 @@ function CreateTrip() {
       id:docId
     });
     setLoading(false);
+
+    navigator('/view-trip/'+docId);
   }
 
   const GetUserProfile=(tokenInfo)=>{

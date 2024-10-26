@@ -1,11 +1,12 @@
 import React from 'react'
 import { Button } from '../ui/button'
+import logo from '../../assets/logo.png';
 
 function Header() {
   return (
     <div className='p-2 shadow-sm flex justify-between items-center px-5'>
         <div>
-            <img className='object-scale-down h-40 w-full' src='logo.png'/>
+            <img className='object-scale-down h-40 w-full' src={logo}/>
         </div>
         <div>
             <Button>Sign In</Button>
