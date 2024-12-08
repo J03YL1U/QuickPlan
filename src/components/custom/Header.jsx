@@ -92,7 +92,7 @@ function Header() {
           <Button onClick={()=>setOpenDialog(true)}>Sign In</Button>
         )}
       </div>
-      <Dialog open={openDialog}>
+      <Dialog open={openDialog} onOpenChange={setOpenDialog}>
         <DialogContent>
           <DialogHeader>
             <DialogTitle className="text-lg font-bold">Sign in with Google</DialogTitle>
