@@ -12,7 +12,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
-
+import logo from '../assets/logo.png';
 import axios from 'axios';
 import { doc, setDoc } from "firebase/firestore"; 
 import { FcGoogle } from "react-icons/fc";
@@ -178,7 +178,7 @@ function CreateTrip() {
           <DialogHeader>
             <DialogTitle className="text-lg font-bold">Sign in with Google</DialogTitle>
             <DialogDescription>
-              <img className="object-scale-down h-40 w-full" src="/logo.png" alt="Logo" />
+              <img className="object-scale-down h-40 w-full" src={logo} alt="Logo" />
               <span>Sign in to the App with Google authentication securely</span>
               <Button onClick={login} className="w-full mt-5 gap-4 items-center">
                 <FcGoogle className="h-7 w-7" /> Sign in with Google
